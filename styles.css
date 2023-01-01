@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100&family=Ubuntu&display=swap');
+/* font-family: 'Overpass', sans-serif;
+   font-family: 'Ubuntu', sans-serif; */
+
+root {
+    /* Primary */
+    --light-red-cta-text: hsl(356, 100%, 66%);
+    --very-light-red-cta-hover-background: hsl(355, 100%, 74%);
+    --very-dark-blue-heading: hsl(208, 49%, 24%);
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --grayish-blue-footer-text: hsl(240, 2%, 79%);
+    --very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
+    --very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
+    /* Gradient -> */
+    /* Background gradient-Intro/CTA mobile nav */
+    --very-light-red: hsl(13, 100%, 72%);
+    --light-red: hsl(353, 100%, 62%);
+    /* Background-gradient-body */
+    --very-dark-gray-blue: hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: black; */
+}
+
+.intro {
+    height: 450px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 70px;
+}
+
+.intro::after {
+    content: '';
+    position: absolute;
+    top: 16%;
+    width: 100vw;
+    height: 100%;
+    left: 5%;
+    transform: translateX(-50%);
+    transform: scale(2.5);
+    background-image: url("images/bg-pattern-intro-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(169deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+}
