@@ -92,7 +92,6 @@ body {
 
 nav {
     background-color: var(--white);
-    /* height: 70vh; */
     width: 90%;
     margin: 110px auto;
     padding: 30px;
@@ -105,10 +104,12 @@ nav {
     font-family: var(--ubuntu);
     transition: .4s;
 }
-.display-nav{
+
+.display-nav {
     left: 5%;
 }
-nav p{
+
+nav p {
     text-align: center;
     font-size: 1.3rem;
     font-weight: 600;
@@ -116,20 +117,27 @@ nav p{
     color: var(--very-dark-blue-heading);
 }
 
-.product, .company, .connect{
+.product,
+.company,
+.connect {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
-.connect p:hover{
+
+.connect p:hover {
     color: var(--very-dark-grayish-blue-body-copy);
 }
-.product img, .company img, .connect img{
+
+.product img,
+.company img,
+.connect img {
     margin-left: 10px;
     align-self: center;
     transition: .4s;
 }
-.connect-items{
+
+.connect-items {
     width: 100%;
     /* height: 60px; */
     background-color: #eee;
@@ -137,36 +145,175 @@ nav p{
     margin-top: 20px;
 }
 
-.display-arrow{
+.display-arrow {
     transform: rotate(540deg);
 }
-.connect-items{
+
+.connect-items {
     display: none;
     padding: 0 20px 20px 20px;
 }
-.display-connect-items{
+
+.display-connect-items {
     display: block;
 }
-.connect-items p{
+
+.connect-items p {
     padding-top: 25px;
     font-size: .9rem;
     color: var(--very-dark-grayish-blue-body-copy);
 }
-.login-and-signup{
+
+.login-and-signup {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid #ddd;
 }
-.signup{
+
+.signup {
     margin: 10px auto;
-    /* color: var(--white) !important; */
     background: linear-gradient(169deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     padding: 20px;
     width: 190px;
     border-radius: 30px;
 }
-.signup p{
+
+.signup p {
     color: var(--white);
+}
+
+@media screen and (min-width: 1024px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .logo {
+        align-self: center;
+    }
+
+    nav {
+        /* width: 80%; */
+        overflow: visible;
+        transition: 0s;
+        position: sticky;
+        left: 5%;
+        background: none;
+        margin: 20px auto;
+        padding: 0;
+        box-shadow: none;
+
+        height: auto;
+    }
+
+    .nav-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav p {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: var(--white);
+    }
+
+    .links {
+        display: flex;
+        margin-left: 140px;
+    }
+
+    .product,
+    .company,
+    .connect {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        margin-top: 0;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .connect p:hover {
+        color: var(--white);
+        text-decoration: underline;
+    }
+
+    .product img,
+    .company img,
+    .connect img {
+        margin-left: 10px;
+        align-self: center;
+        filter: brightness(0) invert(1);
+        transition: .4s;
+    }
+
+    .connect-items {
+        width: 100%;
+        background-color: var(--white);
+        border-radius: 7px;
+        margin-top: 20px;
+        width: 160px;
+        position: fixed;
+        top: 70px;
+        left: 460px;
+        display: none;
+        padding: 0 20px 20px 20px;
+    }
+
+    .connect-items p {
+        text-align: left;
+    }
+
+    .display-connect-items {
+        display: block;
+    }
+
+    .connect-items p {
+        padding-top: 25px;
+        font-size: .9rem;
+        color: var(--very-dark-grayish-blue-body-copy);
+    }
+    
+    .connect-items p:hover{
+        color: var(--very-dark-blue-heading);
+    }
+
+    .login-and-signup {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 0;
+        padding-top: 0;
+        border: none;
+    }
+
+    .login {
+        align-self: center;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .signup {
+        margin: 10px auto;
+        background: var(--white);
+        height: 60px;
+        align-self: center;
+        cursor: pointer;
+    }
+
+    .signup:hover{
+        background: var(--very-light-red-cta-hover-background);
+        opacity: .2;
+    }
+
+    .signup p {
+        color: var(--light-red-cta-text) !important;
+    }
+    .signupHover{
+        color: var(--white) !important;
+    }
 }

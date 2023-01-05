@@ -6,7 +6,8 @@ const connectImg = document.querySelector(".connect-img")
 const connectItems = document.querySelector('.connect-items')
 const hideConnectImg = document.querySelector('.display-arrow')
 const navBar = document.querySelector('nav')
-
+const navContents = document.querySelector('nav').innerHTML
+const signUp = document.querySelector('.signup')
 
 open.addEventListener("click", () => {
     open.style.display = "none"
@@ -26,3 +27,6 @@ connect.addEventListener("click", () => {
     connectItems.classList.toggle('display-connect-items')
 })
 
+signUp.addEventListener('mouseover', () => {
+    signUp.querySelector('p').classList.add('signupHover')
+})
