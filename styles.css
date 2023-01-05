@@ -2,7 +2,7 @@
 /* font-family: 'Overpass', sans-serif;
    font-family: 'Ubuntu', sans-serif; */
 
-root {
+:root {
     /* Primary */
     --light-red-cta-text: hsl(356, 100%, 66%);
     --very-light-red-cta-hover-background: hsl(355, 100%, 74%);
@@ -19,6 +19,9 @@ root {
     /* Background-gradient-body */
     --very-dark-gray-blue: hsl(237, 17%, 21%);
     --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+    /* fonts */
+    --overpass: 'Overpass', sans-serif;
+    --ubuntu: 'Ubuntu', sans-serif;
 }
 
 * {
@@ -29,6 +32,7 @@ root {
 
 body {
     /* background-color: black; */
+    background-color: #eee;
 }
 
 .intro {
@@ -52,12 +56,117 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    /* opacity: .4; */
+    z-index: 2;
 }
-.overlay{
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(169deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    /* z-index: 2; */
+}
+
+.logo-and-hamburger {
+    padding-top: 20px;
+    margin: 20px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    position: sticky;
+    /* overflow: hidden; */
+}
+
+.hamburger {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.close {
+    display: none;
+}
+
+nav {
+    background-color: var(--white);
+    /* height: 70vh; */
+    width: 90%;
+    margin: 110px auto;
+    padding: 30px;
+    z-index: 5;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+    overflow: visible;
+    position: fixed;
+    left: 100%;
+    font-family: var(--ubuntu);
+    transition: .4s;
+}
+.display-nav{
+    left: 5%;
+}
+nav p{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--very-dark-blue-heading);
+}
+
+.product, .company, .connect{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.connect p:hover{
+    color: var(--very-dark-grayish-blue-body-copy);
+}
+.product img, .company img, .connect img{
+    margin-left: 10px;
+    align-self: center;
+    transition: .4s;
+}
+.connect-items{
+    width: 100%;
+    /* height: 60px; */
+    background-color: #eee;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+.display-arrow{
+    transform: rotate(540deg);
+}
+.connect-items{
+    display: none;
+    padding: 0 20px 20px 20px;
+}
+.display-connect-items{
+    display: block;
+}
+.connect-items p{
+    padding-top: 25px;
+    font-size: .9rem;
+    color: var(--very-dark-grayish-blue-body-copy);
+}
+.login-and-signup{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+.signup{
+    margin: 10px auto;
+    /* color: var(--white) !important; */
+    background: linear-gradient(169deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    padding: 20px;
+    width: 190px;
+    border-radius: 30px;
+}
+.signup p{
+    color: var(--white);
 }
