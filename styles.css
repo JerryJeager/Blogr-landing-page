@@ -79,7 +79,7 @@ body {
 }
 
 .logo-and-hamburger-fixed {
-    padding: 40px 5% 20px 5%;
+    padding: 20px 5% 20px 5%;
     margin: 0 auto;
     width: 100%;
     position: fixed;
@@ -94,10 +94,6 @@ body {
     cursor: pointer;
 }
 
-.hamburger-fixed{
-    position: fixed;
-    left: 70%;
-}
 
 .close {
     display: none;
@@ -341,8 +337,34 @@ nav p {
 }
 
 .open-source{
-    margin-top: 4rem;
+    width: 90%;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
 }
+
+.laptop-img{
+    width: 100%;
+    height: 250px;
+    background: url('images/illustration-laptop-mobile.svg') center/cover no-repeat;
+}
+
+.open-source-info{
+    font-family: var(--ubuntu);
+    text-align: center;
+}
+.open-source-info h2{
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    color: var(--very-dark-blue-heading);
+}
+
+.open-source-info p{
+    color: var(--very-dark-grayish-blue-body-copy);
+    line-height: 1.7;
+    margin-top: 1.6rem;
+}
+
 
 @media screen and (min-width: 1024px) {
 
