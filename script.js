@@ -1,3 +1,4 @@
+const fixedHeader = document.querySelector('.logo-and-hamburger')
 const hamburger = document.querySelector(".hamburger")
 const open = document.querySelector('.open')
 const close = document.querySelector('.close')
@@ -29,4 +30,15 @@ connect.addEventListener("click", () => {
 
 signUp.addEventListener('mouseover', () => {
     signUp.querySelector('p').classList.add('signupHover')
+})
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY >= 30){
+        fixedHeader.classList.add("logo-and-hamburger-fixed")
+        // hamburger.classList.add("hamburger-fixed")
+    }
+    else{
+        fixedHeader.classList.remove("logo-and-hamburger-fixed")
+        // hamburger.classList.remove("hamburger-fixed")
+    }
 })

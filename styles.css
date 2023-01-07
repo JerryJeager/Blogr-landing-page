@@ -33,6 +33,7 @@
 body {
     /* background-color: black; */
     background-color: #eee;
+    /* z-index: 5; */
 }
 
 .intro {
@@ -77,10 +78,25 @@ body {
     position: sticky;
 }
 
+.logo-and-hamburger-fixed {
+    padding: 40px 5% 20px 5%;
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(169deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    z-index: 20;
+}
+
 .hamburger {
     align-self: flex-start;
     margin-top: 10px;
     cursor: pointer;
+}
+
+.hamburger-fixed{
+    position: fixed;
+    left: 70%;
 }
 
 .close {
@@ -257,6 +273,75 @@ nav p {
 
 .content-management{
     margin-top: 2rem;
+}
+
+.infrastructure{
+    margin-top: 12rem;
+    padding-bottom: 2rem;
+    width: 100vw;
+    background-color: var(--very-dark-gray-blue);
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    position: relative;
+}
+
+.infrastructure::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 260px;
+    background: url('images/bg-pattern-circles.svg') center/cover no-repeat;
+    transform: rotate(180deg);
+    overflow: hidden;
+}
+
+.circles{
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+}
+
+.circles img{
+    overflow: hidden;
+    transform: scale(1.5);
+}
+
+.infrastructure-info{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    transform: translateY(-120px);
+}
+
+.phone-img{
+    width: 100%;
+    height: 350px;
+    background: url('images/illustration-phones.svg') center/cover no-repeat;
+    z-index: 16 !important;
+}
+
+.infrastructure-txt{
+    margin-top: 2rem;
+    color: var(--white) !important;
+    font-family: var(--ubuntu);
+    text-align: center;
+    z-index: 6;
+}
+
+.infrastructure-txt h2{
+    font-size: 1.9rem;
+    letter-spacing: 1.5px;
+}
+
+.infrastructure-txt p{
+    margin-top: 2rem;
+    line-height: 1.9;
+    opacity: .8;
+}
+
+.open-source{
+    margin-top: 4rem;
 }
 
 @media screen and (min-width: 1024px) {
