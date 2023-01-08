@@ -108,6 +108,7 @@ nav {
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
     overflow: visible;
+    overflow: scroll;
     position: fixed;
     left: 100%;
     font-family: var(--ubuntu);
@@ -135,7 +136,7 @@ nav p {
     margin-top: 20px;
 }
 
-.connect p:hover {
+.connect p:hover, .product p:hover, .company p:hover {
     color: var(--very-dark-grayish-blue-body-copy);
 }
 
@@ -147,28 +148,26 @@ nav p {
     transition: .4s;
 }
 
-.connect-items {
-    width: 100%;
-    /* height: 60px; */
-    background-color: #eee;
-    border-radius: 7px;
-    margin-top: 20px;
-}
-
 .display-arrow {
     transform: rotate(540deg);
 }
 
+.company-items,
+.product-items,
 .connect-items {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 7px;
+    margin-top: 20px;
     display: none;
     padding: 0 20px 20px 20px;
 }
 
-.display-connect-items {
+.display-items {
     display: block;
 }
 
-.connect-items p {
+.company-items p, .product-items p, .connect-items p {
     padding-top: 25px;
     font-size: .9rem;
     color: var(--very-dark-grayish-blue-body-copy);
@@ -237,7 +236,6 @@ nav p {
 .editor-and-content-management{
     width: 90%;
     margin: 4rem auto;
-    font-family: var(--ubuntu);
     text-align: center;
 }
 .editor-and-content-management p{
@@ -245,8 +243,11 @@ nav p {
     line-height: 1.6;
     font-size: 1.1rem;
     margin-top: 1.3rem;
+    font-family: var(--overpass);
+    font-weight: 700;
 }
 .editor-and-content-management h2{
+    font-family: var(--ubuntu);
     color: var(--very-dark-blue-heading);
     font-size: 1.7rem;
 }
@@ -320,7 +321,6 @@ nav p {
 .infrastructure-txt{
     margin-top: 2rem;
     color: var(--white) !important;
-    font-family: var(--ubuntu);
     text-align: center;
     z-index: 6;
 }
@@ -328,12 +328,15 @@ nav p {
 .infrastructure-txt h2{
     font-size: 1.9rem;
     letter-spacing: 1.5px;
+    font-family: var(--ubuntu);
 }
 
 .infrastructure-txt p{
     margin-top: 2rem;
     line-height: 1.9;
     opacity: .8;
+    font-family: var(--overpass);
+    font-weight: 700;
 }
 
 .open-source{
@@ -350,10 +353,10 @@ nav p {
 }
 
 .open-source-info{
-    font-family: var(--ubuntu);
     text-align: center;
 }
 .open-source-info h2{
+    font-family: var(--ubuntu);
     margin-top: 2rem;
     font-size: 1.7rem;
     color: var(--very-dark-blue-heading);
@@ -363,6 +366,16 @@ nav p {
     color: var(--very-dark-grayish-blue-body-copy);
     line-height: 1.7;
     margin-top: 1.6rem;
+    font-family: var(--overpass);
+    font-weight: 700;
+}
+
+footer{
+    margin-top: 2rem;
+    background-color: var(--very-dark-black-blue-footer-background);
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    height: 500px;
 }
 
 

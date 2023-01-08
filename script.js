@@ -9,6 +9,12 @@ const hideConnectImg = document.querySelector('.display-arrow')
 const navBar = document.querySelector('nav')
 const navContents = document.querySelector('nav').innerHTML
 const signUp = document.querySelector('.signup')
+let navItems = {
+    product: ["product-img", "product-items"],
+    company: ["company-img", "company-items"],
+    connect: ["connect-img", "connect-items"]
+}
+
 
 open.addEventListener("click", () => {
     open.style.display = "none"
@@ -22,11 +28,17 @@ close.addEventListener('click', () => {
     navBar.classList.toggle('display-nav')
 })
 
-connect.addEventListener("click", () => {
-    connect.classList.toggle('hide-connect')
-    connectImg.classList.toggle('display-arrow')
-    connectItems.classList.toggle('display-connect-items')
-})
+function displayNavItems(nav) {
+    for (let item in nav) {
+        document.querySelector(`.${item}`).addEventListener('click', () => {
+            document.querySelector(`.${nav[item][0]}`).classList.toggle('display-arrow')
+            document.querySelector(`.${nav[item][1]}`).classList.toggle('display-items')
+        })
+    }
+}
+
+displayNavItems(navItems)
+
 
 signUp.addEventListener('mouseover', () => {
     signUp.querySelector('p').classList.add('signupHover')
@@ -35,10 +47,8 @@ signUp.addEventListener('mouseover', () => {
 window.addEventListener('scroll', () => {
     if(window.scrollY >= 30){
         fixedHeader.classList.add("logo-and-hamburger-fixed")
-        // hamburger.classList.add("hamburger-fixed")
     }
     else{
         fixedHeader.classList.remove("logo-and-hamburger-fixed")
-        // hamburger.classList.remove("hamburger-fixed")
     }
 })
