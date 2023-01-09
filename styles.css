@@ -372,10 +372,36 @@ nav p {
 
 footer{
     margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2.6rem;
     background-color: var(--very-dark-black-blue-footer-background);
     border-top-right-radius: 70px;
-    border-bottom-left-radius: 70px;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    text-align:center;
+    font-family: var(--ubuntu);
+}
+
+.footer-product{
+    margin-top: 2rem;
+}
+
+footer h2{
+    font-size: 1.2rem;
+}
+
+footer p{
+    opacity: .7;
+    line-height: 1.8;
+}
+
+footer div{
+    margin-top: 30px;
+}
+
+footer h2 + p{
+    margin-top: 25px;
 }
 
 
@@ -431,7 +457,7 @@ footer{
         cursor: pointer;
     }
 
-    .connect p:hover {
+    .connect p:hover, .company p:hover, .product p:hover {
         color: var(--white);
         text-decoration: underline;
     }
@@ -445,24 +471,32 @@ footer{
         transition: .4s;
     }
 
-    .connect-items {
+    .connect-items, .company-items, .product-items {
         width: 100%;
         background-color: var(--white);
         border-radius: 7px;
         margin-top: 20px;
         width: 160px;
-        position: fixed;
-        top: 70px;
-        left: 460px;
         display: none;
         padding: 0 20px 20px 20px;
+        position: fixed;
+        top: 70px;
+    }
+    .connect-items{
+        left: 540px;
+    }
+    .company-items{
+        left: 360px;
+    }
+    .product-items{
+        left: 160px;
     }
 
-    .connect-items p {
+    .connect-items p, .company-items p, .product-items p {
         text-align: left;
     }
 
-    .display-connect-items {
+    .display-items {
         display: block;
     }
 

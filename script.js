@@ -15,7 +15,6 @@ let navItems = {
     connect: ["connect-img", "connect-items"]
 }
 
-
 open.addEventListener("click", () => {
     open.style.display = "none"
     close.style.display = "block"
@@ -38,7 +37,6 @@ function displayNavItems(nav) {
 }
 
 displayNavItems(navItems)
-
 
 signUp.addEventListener('mouseover', () => {
     signUp.querySelector('p').classList.add('signupHover')
