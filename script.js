@@ -8,7 +8,6 @@ const connectItems = document.querySelector('.connect-items')
 const hideConnectImg = document.querySelector('.display-arrow')
 const navBar = document.querySelector('nav')
 const navContents = document.querySelector('nav').innerHTML
-const signUp = document.querySelector('.signup')
 let navItems = {
     product: ["product-img", "product-items"],
     company: ["company-img", "company-items"],
@@ -38,9 +37,6 @@ function displayNavItems(nav) {
 
 displayNavItems(navItems)
 
-signUp.addEventListener('mouseover', () => {
-    signUp.querySelector('p').classList.add('signupHover')
-})
 
 window.addEventListener('scroll', () => {
     if(window.scrollY >= 30){
