@@ -418,6 +418,9 @@ footer h2+p {
 
 
 @media screen and (min-width: 1024px) {
+    html, body{
+        overflow-x: hidden;
+    }
 
     .intro::after {
     top: -633px;
@@ -425,7 +428,7 @@ footer h2+p {
     height: 1000px;
     transform: scale(1.6);
     background-image: url("images/bg-pattern-intro-desktop.svg");
-}
+    }
 
     .hamburger {
         display: none;
@@ -605,5 +608,25 @@ footer h2+p {
 
     .info-btn {
         width: 150px;
+    }
+
+    .editor-and-content-management{
+        margin-top: 6rem;
+    }
+
+    .editor-and-content-management-container{
+        flex-direction: row-reverse;
+        width: 100vw;
+    }
+    .editor-img{
+        z-index: 3;
+        width: 45%;
+        height: 650px;
+        transform: translateY(-100px);
+    }
+    .editor-and-content-management-info{
+        margin-right: 5%;
+        width: 48%;
+        text-align: left;
     }
 }
