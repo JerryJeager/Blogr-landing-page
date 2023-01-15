@@ -673,4 +673,11 @@ footer h2+p {
         margin-top: 3rem;
     }
 
+    footer{
+        flex-direction: row;
+        padding-left: 5%;
+        padding-right: 30%;
+        justify-content: space-between;
+    }
+
 }
