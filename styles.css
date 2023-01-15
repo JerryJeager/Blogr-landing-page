@@ -656,9 +656,21 @@ footer h2+p {
     }
 
     .open-source{
-        /* border: 2px solid red; */
-        margin-top: 10rem;
+        width: 100vw;
+        margin-top: 14rem;
         flex-direction: row;
+        padding-right: 4rem;
+    }
+
+    .laptop-img{
+        height: 620px;
+        background: url('images/illustration-laptop-desktop.svg') right/cover no-repeat;
+    }
+
+    .open-source-info{
+        text-align: left;
+        width: 800px;
+        margin-top: 3rem;
     }
 
 }
