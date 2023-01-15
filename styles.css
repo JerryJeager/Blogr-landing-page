@@ -303,17 +303,6 @@ nav p {
     overflow: hidden;
 }
 
-.circles {
-    display: flex;
-    justify-content: center;
-    z-index: 3;
-}
-
-.circles img {
-    overflow: hidden;
-    transform: scale(1.5);
-}
-
 .infrastructure-info {
     display: flex;
     flex-direction: column;
@@ -418,16 +407,18 @@ footer h2+p {
 
 
 @media screen and (min-width: 1024px) {
-    html, body{
+
+    html,
+    body {
         overflow-x: hidden;
     }
 
     .intro::after {
-    top: -633px;
-    left: 7%;
-    height: 1000px;
-    transform: scale(1.6);
-    background-image: url("images/bg-pattern-intro-desktop.svg");
+        top: -633px;
+        left: 7%;
+        height: 1000px;
+        transform: scale(1.6);
+        background-image: url("images/bg-pattern-intro-desktop.svg");
     }
 
     .hamburger {
@@ -610,23 +601,64 @@ footer h2+p {
         width: 150px;
     }
 
-    .editor-and-content-management{
+    .editor-and-content-management {
         margin-top: 6rem;
     }
 
-    .editor-and-content-management-container{
+    .editor-and-content-management-container {
         flex-direction: row-reverse;
         width: 100vw;
     }
-    .editor-img{
+
+    .editor-img {
         z-index: 3;
         width: 45%;
         height: 650px;
         transform: translateY(-100px);
     }
-    .editor-and-content-management-info{
+
+    .editor-and-content-management-info {
         margin-right: 5%;
         width: 48%;
         text-align: left;
     }
+
+    .infrastructure {
+        padding-top: 2rem;
+        margin-top: -2rem;
+        height: 400px;
+    }
+
+    .infrastructure::before {
+        width: 50%;
+        background-position: right;
+    }
+
+    .phone-img {
+        height: 670px;
+        min-width: 550px;
+        /* width: 70%; */
+    }
+
+    .infrastructure-info {
+        flex-direction: row;
+        transform: translateY(0);
+        align-items: center;
+        margin-top: -6rem;
+        margin-left: 2rem;
+    }
+
+    .infrastructure-txt{
+        text-align: left;
+        margin-top: -6rem;
+        margin-left: 3rem;
+        max-width: 500px;
+    }
+
+    .open-source{
+        /* border: 2px solid red; */
+        margin-top: 10rem;
+        flex-direction: row;
+    }
+
 }

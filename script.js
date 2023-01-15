@@ -39,10 +39,10 @@ displayNavItems(navItems)
 
 
 window.addEventListener('scroll', () => {
-    if(window.scrollY >= 30){
+    if (window.scrollY >= 30) {
         fixedHeader.classList.add("logo-and-hamburger-fixed")
     }
-    else{
+    else {
         fixedHeader.classList.remove("logo-and-hamburger-fixed")
     }
 })
